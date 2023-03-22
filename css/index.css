@@ -1,0 +1,816 @@
+@import url(common.css);
+
+html{scroll-behavior: smooth;}
+body
+  {font-family: 'Oswald', Noto Sans KR, sans-serif;
+  background-color: purple;
+  color: #fff;
+  text-align: center;
+  }
+
+/*HEADER_____________________!!!!!!  */
+.top
+  {position: fixed;
+  right: 50px;
+  bottom: 50px;
+  z-index: 3;
+  }
+.top a
+  {display: block;
+  width: 60px;
+  height: 60px;
+  background: url(../image/logo-top.png) no-repeat;
+  background-size: cover;
+  border-radius: 30%;
+  /* border: 1px solid #000; */
+  transition: 0.3s;
+  }
+.top a:hover
+  {background-color: rgb(72, 0, 75);
+  background-image: url(../image/logo-top02.png);
+  transform: rotateY(360deg);
+  border-radius: 30%;
+  }
+
+header
+  {/* border: 1px solid #000; */
+  width: 100%;
+  height: 124px;
+  position: fixed;
+  z-index: 3;
+  background-color: rgba(75,0,75,0.5);
+  }
+
+.container1
+  {/* border: 1px solid #000; */
+  width: 1200px;
+  height: 124px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  }
+.container1 a 
+  {/* border: 1px solid #000; */
+  width: 200px;
+  height: 100%;
+  }
+  .container1 a img
+    {width: 100%;
+    }
+  .container1 .gnb
+    {/* border: 1px solid blue; */
+    width: 850px;
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 25px;
+    padding: 0 20px 0 0;
+    }
+  .gnb a
+    {transition: 0.35s;
+    /* border: 1px solid #000; */
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    border-radius: 20px;
+    position: relative;
+    }
+  .gnb a:hover
+    {background-color:rgb(253, 205, 255);
+    color: #000;
+    font-weight: 500;
+    padding: 5px 12px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    }
+  .gnb a:before
+    {content:'';
+    /* border: 1px solid #000; */
+    position: absolute;
+    display: inline-block;
+    width: inherit;
+    height: 40px;
+    top: 0;
+    left: 0;
+    background: url(../image/logo-top02.png) center center no-repeat;
+    background-size: 40px 40px;
+    opacity: 0;
+    transition: 0.35s;
+    /* z-index: -1; */
+    }
+    .gnb a:hover:before
+    {opacity: 1;
+    top: 0;
+    left: 0;
+    transform: rotateY(360deg);
+    top: -35px;
+    /* z-index: 1; */
+    }
+/* MAIN_____________________!!!!!!! */
+.main
+  {display: inline-block;
+  width: 100%;
+  height: 900px;
+  background: url(../image/main1.jpg) center center no-repeat fixed;
+  background-size: cover;
+  position: relative;
+  transition: 0.35s;
+  }
+  .main:before
+  {content: '';
+  position: absolute;
+  width: 100%;
+  height: 250px;
+  background: linear-gradient(to bottom, rgba(75,0,75,1), transparent);
+  left: 0;
+  top: 0;
+  }
+.main:hover
+  {background: url(../image/main2.jpg) center center no-repeat fixed;
+  background-size: cover;
+  }
+
+
+/* SECTION__________________!!!!!!! */
+/* _________________________내한공연 */
+#london
+  {width: 1200px;
+  height: 100%;
+  /* border: 1px solid #000; */
+  margin: 0 auto 100px;
+  position: relative;
+  padding-top: 124px;
+  }
+#london::after
+  {content: '. . . . . .';
+  position: absolute;
+  font-size: 100px;
+  color:rgb(80, 0, 80);
+  left: 50%;
+  transform: translateX(-50%);
+  }
+  #london h1
+    {font-size: 50px;
+    margin: 15px;
+    color: gold;
+    }
+  #london .date
+    {font-size: 20px;
+    margin-bottom: 20px;
+    }
+  #london h2
+    {margin-bottom: 10px;}
+
+  #london h3
+    {border-top: 3px solid #ccc;
+    border-bottom: 3px solid #ccc;
+    padding: 10px 0;
+    width: 1100px;
+    height: 70px;
+    margin: auto;
+    font-size: 60px;
+    text-transform: capitalize; 
+    font-weight: 400;
+    line-height: 65px;
+    margin-top: 50px;
+    }
+  .awards
+    {display: flex;
+    mix-blend-mode: lighten;
+    }
+  .award1, .award2, .award3, .award4
+    {width: 25%;
+    background: center top no-repeat;
+    }
+  .award1
+    {background: url(../image/awards_01.png);
+    background-size: cover;
+    height: 345px;
+    }
+  .award2
+    {background: url(../image/awards_02.png);
+    background-size: cover;
+    height: 192px;
+    }
+  .award3
+    {background: url(../image/awards_03.png);
+      width: 25%;
+    height: 241px;
+    background-size: cover;
+    }
+  .award4
+    {background: url(../image/awards_04.png) ;
+      width: 25%;
+    height: 265px;
+    background-size: cover;
+    }
+
+#london ul
+  {margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 1200px;
+  height: 250px;
+  margin-top: 20px;
+  }
+  #london ul li 
+    {width: 200px;
+    position: relative; /* 이걸 넣으면 호버시 이미지가 상단으로 안올라옴 */
+    transition: 0.35s;
+    }
+
+  #london ul [class*=q]:after
+    {font-size: 20px;
+    padding-top: 70px;
+    border-radius: 50% 50%  0 0;
+    background: radial-gradient(at bottom, #000, transparent 110px);
+    }
+  #london ul [class*=q]:before
+  
+    {font-size: 40px;
+    color: gold;
+    line-height: 110px;
+    }
+
+  #london ul .q1:before,
+  #london ul .q1:after
+    {opacity: 0;
+    transition: 0.35s;
+    left: 0;
+    bottom: 0;
+    width: 210px;
+    height: 100px;
+    }
+    #london ul .q1::after
+      {content:'Katherine of Aragon';
+      position: absolute;
+      display: inline-block;
+      }
+    #london ul .q1::before
+      {content: 'Chloe Hart';
+      position: absolute;
+      display: inline-block;
+      }
+
+  #london ul .q2:before,
+  #london ul .q2:after
+    {opacity: 0;
+    transition: 0.35s;
+    left: 10px;
+    bottom: 0;
+    width: 220px;
+    height: 100px;
+    }
+    #london ul .q2::after
+      {content:'Anne Boleyn';
+      position: absolute;
+      display: inline-block;
+      }
+
+    #london ul .q2::before
+      {content: 'Jennifer Caldwell';
+      position: absolute;
+      display: inline-block;
+      letter-spacing: -2px;
+      }
+
+    #london ul .q3:before,
+    #london ul .q3:after
+      {opacity: 0;
+      transition: 0.35s;
+      left: 30px;
+      bottom: 0;
+      width: 220px;
+      height: 100px;
+      }
+      #london ul .q3::after
+        {content:'Jane Seymour';
+        position: absolute;
+        display: inline-block;
+        }
+    
+      #london ul .q3::before
+        {content: 'Casey Al-Shaqsy';
+        position: absolute;
+        display: inline-block;
+        letter-spacing: -2px;
+        }
+
+    #london ul .q4:before,
+    #london ul .q4:after
+      {opacity: 0;
+      transition: 0.35s;
+      left: 40px;
+      bottom: 0;
+      width: 220px;
+      height: 100px;
+      }
+      #london ul .q4::after
+        {content:'Anna of Cleves';
+        position: absolute;
+        display: inline-block;
+        }
+      #london ul .q4::before
+        {content: 'Jessica Niles';
+        position: absolute;
+        display: inline-block;
+        }
+
+    #london ul .q5:before,
+    #london ul .q5:after
+      {opacity: 0;
+      transition: 0.35s;
+      left: 20px;
+      bottom: 0;
+      width: 220px;
+      height: 100px;
+      }
+      #london ul .q5::after
+        {content:'Katherine Howard';
+        position: absolute;
+        display: inline-block;
+        }
+      #london ul .q5::before
+        {content: 'Rebecca Wickes';
+        position: absolute;
+        display: inline-block;
+        letter-spacing: -2px;
+        }
+
+    #london ul .q6:before,
+    #london ul .q6:after
+      {opacity: 0;
+      transition: 0.35s;
+      left: 0px;
+      bottom: 0;
+      width: 220px;
+      height: 100px;
+      }
+      #london ul .q6::after
+        {content:'Catherine Parr';
+        position: absolute;
+        display: inline-block;
+        }
+      #london ul .q6::before
+        {content: 'Alana M Robinson';
+        position: absolute;
+        display: inline-block;
+        letter-spacing: -3px;
+        }
+
+  #london ul li img
+    {/* border: 1px solid #000;  */
+    box-sizing: border-box;
+    height: 250px;
+    box-sizing: border-box;
+    transition: 0.35s;
+    }
+  #london .howard
+    {height: 270px;}
+#london ul li:hover 
+  {transform:  scale(1.3);
+  transform-origin: bottom;
+  z-index: 2;
+  }
+  #london ul [class*=q]:hover:after
+  {opacity: 1;
+  z-index: 1;
+  }
+  #london ul [class*=q]:hover:before
+    {opacity: 1;
+    z-index: 2;}
+/* _________________________한국초연 */
+#korea
+  {width: 100%;
+  height: 900px;
+  /* border: 1px solid #000; */
+  margin: 0 auto 200px;
+  background: linear-gradient(to top, gold, transparent);
+  padding-top: 124px;
+  }
+  #korea h1
+    {font-size: 50px;
+    margin: 15px;
+    color: gold;
+    }
+    #korea .date
+    {font-size: 20px;
+    margin-bottom: 20px;
+    }
+    #korea h2
+    {margin-bottom: 10px;}
+    #korea h2:nth-of-type(2)
+      {margin-bottom: 50px;}
+  .cast
+    {display: flex;
+    width: 100%;
+    /* border: 1px solid #000; */
+    }
+  .cast li
+    {height: 700px;
+    flex: 1;
+    /* border: 1px solid red; */
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+    }
+    .cast li:hover
+      {flex: 4;}
+      .cast [class*=kphoto]:hover:before
+      {right: 0;
+      opacity: 1;
+      }
+    .cast [class*=kphoto]:before
+      {opacity: 0;
+      background-size: cover;
+      height: 700px;
+      width: 100%;
+      right: 100%;
+      transition: 0.5s;
+      transition-delay: 0.5s;
+      }
+
+  #korea .cast .kphoto1
+    {background: url(../image/k1.jpg) no-repeat center center;
+    background-size: cover;
+    }
+    .cast .kphoto1:before
+    {content:'';
+    position: absolute;
+    background: url(../image/k01.jpg) no-repeat center center;
+    background-size: cover;
+    } 
+  #korea .cast .kphoto2
+    {background: url(../image/k2.jpg) no-repeat center right;
+    background-size: cover;
+    }
+    .cast .kphoto2:before
+    {content:'';
+    position: absolute;
+    background: url(../image/k02.jpg) no-repeat center center;
+    background-size: cover;
+    } 
+  #korea .cast .kphoto3
+    {background: url(../image/k3.jpg) no-repeat center center;
+      background-size: cover;}
+    .cast .kphoto3:before
+    {content:'';
+    position: absolute;
+    background: url(../image/k03.jpg) no-repeat center center;
+    background-size: cover;
+    } 
+  #korea .cast .kphoto4
+    {background: url(../image/k4.jpg) no-repeat center center;
+      background-size: cover;}
+    .cast .kphoto4:before
+    {content:'';
+    position: absolute;
+    background: url(../image/k04.jpg) no-repeat center center;
+    background-size: cover;
+    } 
+  #korea .cast .kphoto5
+    {background: url(../image/k5.jpg) no-repeat center center;
+      background-size: cover;}
+    .cast .kphoto5:before
+    {content:'';
+    position: absolute;
+    background: url(../image/k05.jpg) no-repeat center center;
+    background-size: cover;
+    } 
+  #korea .cast .kphoto6
+    {background: url(../image/k6.jpg) no-repeat center center;
+      background-size: cover;}
+    .cast .kphoto6:before
+    {content:'';
+    position: absolute;
+    background: url(../image/k06.jpg) no-repeat center center;
+    background-size: cover;
+    } 
+  #korea .cast .kphoto7
+    {background: url(../image/k7.jpg) no-repeat center center;
+      background-size: cover;}
+    .cast .kphoto7:before
+    {content:'';
+    position: absolute;
+    background: url(../image/k07.jpg) no-repeat center center;
+    background-size: cover;
+    } 
+  #korea .cast .kphoto8
+    {background: url(../image/k8.jpg) no-repeat center center;
+      background-size: cover;}
+    .cast .kphoto8:before
+    {content:'';
+    position: absolute;
+    background: url(../image/k08.jpg) no-repeat center center;
+    background-size: cover;
+    } 
+    #korea .cast .kphoto9
+    {background: url(../image/k9.jpg) no-repeat center center;
+      background-size: cover;}
+    .cast .kphoto9:before
+    {content:'';
+    position: absolute;
+    background: url(../image/k09.jpg) no-repeat center center;
+    background-size: cover;
+    } 
+  #korea .cast .kphoto10
+    {background: url(../image/k10.jpg) no-repeat center center;
+    background-size: cover;}
+    .cast .kphoto10:before
+    {content:'';
+    position: absolute;
+    background: url(../image/k010.jpg) no-repeat center center;
+    background-size: cover;
+    } 
+  #korea .cast .kphoto11
+    {background: url(../image/k11.jpg) no-repeat center center;
+      background-size: cover;}
+    .cast .kphoto11:before
+    {content:'';
+    position: absolute;
+    background: url(../image/k011.jpg) no-repeat center center;
+    background-size: cover;
+    } 
+  #korea .cast .kphoto12
+    {background: url(../image/k12.jpg) no-repeat center center;
+    background-size: cover;}
+  .cast .kphoto12:before
+    {content:'';
+    position: absolute;
+    background: url(../image/k012.jpg) no-repeat center center;
+    background-size: cover;
+    } 
+  
+/* _________________________공연예매 */
+#ticket
+  {width: 1200px;
+  height: 800px;
+  border-top: 3px solid rgb(80, 0, 80);
+  border-bottom: 3px solid rgb(80, 0, 80);
+  margin: auto;
+  padding: 124px 0;
+
+  }
+#ticket h1
+  {font-size: 50px;
+  margin: 15px;
+  color: gold;
+  }
+  #ticket .schedule
+    {position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 1200px;
+    height: 600px;
+    /* border: 1px solid blue; */
+    }
+    .schedule img
+      {width: 500px;
+      box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+      transition: 0.5s; 
+      }
+    .schedule img:hover
+      {transform: scale(1.3);}
+#ticket ul
+  {width: 1200px;
+  height: 50px;
+  /* border: 1px solid #000; */
+  color: orange;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 25px;
+  
+  }
+#ticket ul li a
+  {background-color: rgb(80, 0, 80);
+  padding: 10px 50px;
+  border: 3px solid gold;
+  border-radius: 50px;
+  box-sizing: border-box;
+  border-radius: 50px;
+  display: inline-block;
+  position: relative;
+  transition: 0.35s;
+  overflow: hidden;
+  }
+  #ticket ul li a::before
+    {content:'GO';
+    position: absolute;
+    display: inline-block;
+    background-color: orange;
+    font-size: 35px;
+    width: 0%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: 0.35s;
+    opacity: 0;
+    line-height: 60px;
+    }
+  #ticket ul li a:hover
+    {color:rgb(80, 0, 80);
+    
+    }
+  #ticket ul li a:hover:before
+    {opacity: 1;
+    width: 100%;
+    }
+/* _________________________공연소식 */
+#news
+  {width: 1200px;
+  /* border: 1px solid #000; */
+  margin: auto;
+  padding: 124px 0 80px;
+  border-bottom: 3px solid rgb(80, 0, 80);
+  }
+#news h1
+  {font-size: 50px;
+  margin: 15px;
+  color: gold;
+  }
+#news ul
+  {display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+  margin-bottom: 30px;
+  }
+#news ul li
+  {position: relative;
+  width: 380px;
+  height: 380px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  overflow: hidden;
+  transition: 0.5s;
+  }
+#news ul .n1
+  {background: url(../image/n1.jpg) no-repeat center center;
+  background-size: cover;
+  }
+#news ul .n2
+  {background: url(../image/n2.jpg) no-repeat center center;
+  background-size: 380px;
+  }
+#news ul .n3
+  {background: url(../image/n3.jpg) no-repeat center center;
+  background-size: cover;
+  }
+  #news ul li a
+    {display: inline-block;
+    width: 380px;
+    height: 380px;
+    /* border: 1px solid #000; */
+    background-color: rgba(0,0,0,0.5);
+    font-size: 35px;
+    text-shadow: 10px 10px 10px black;
+    line-height: 380px;
+    color: gold;
+    text-transform: capitalize;
+    opacity: 0;
+    transition: 0.5s;
+    }
+    #news ul li a:hover
+    {opacity: 1;
+    }
+    #news ul li:hover
+    {border-radius: 50%;
+    }
+#news .view
+  {font-size: 35px;
+  background-color:rgb(80, 0, 80);
+  padding: 0 30px;
+  text-transform: capitalize;
+  border-radius: 50px;
+  transition: 0.35s;
+  }
+  .view:hover
+    {/* text-decoration: underline; */
+    color: gold;
+    font-style: italic;
+    }
+/* _________________________공연리뷰 */
+#review
+  {width: 1200px;
+  /* border: 1px solid #000; */
+  margin: auto;
+  color: #000;
+  padding-top: 124px;
+  }
+#review h1
+  {font-size: 50px;
+  margin: 30px;
+  color: gold;
+  text-transform: uppercase;
+  }
+#review ul
+  {position: relative;
+  /* border: 1px solid #000; */
+  width: 1200px;
+  height: 400px;
+  
+  }
+#review ul li
+  {/* border: 1px solid blue; */
+  display: inline-block;
+  position: absolute;
+  padding: 5px 20px;
+  font-size: 25px;
+  transition: 0.35s;
+  }
+  
+#review ul li:nth-child(1)
+  {left: 60px;}
+  #review ul li:nth-child(2)
+  {right: 60px;}
+  #review ul li:nth-child(3)
+  {left: 0;
+  top: 70px;}
+  #review ul li:nth-child(4)
+  {left: 610px;
+  top: 70px;}
+  #review ul li:nth-child(5)
+  {right: 0;
+  top: 70px;}
+  #review ul li:nth-child(6)
+  {left: 220px;
+  top: 140px;}
+  #review ul li:nth-child(7)
+  {right: 100px;
+  top: 140px;}
+  #review ul li:nth-child(8)
+  {left: 20px;
+  top: 210px;}
+  #review ul li:nth-child(9)
+  {left: 370px;
+  top: 210px;}
+  #review ul li:nth-child(10)
+  {right: 10px;
+  top: 210px;
+  }
+  #review ul li:nth-child(11)
+  {left: 50px;
+  top: 280px;}
+  #review ul li:nth-child(12)
+  {left: 380px;
+  top: 280px}
+  #review ul li:nth-child(13)
+  {right: 80px;
+  top: 280px;}
+#review ul li:hover
+  {background-color: #fff/* rgb(253, 205, 255) */;
+  color:rgb(80, 0, 80);
+  font-weight: bold;
+  font-size: 30px;
+  border-radius: 30px;
+  z-index: 1;
+  }
+  #review ul li:hover p
+  {color: orange;
+  font-weight: 600;
+  }
+
+  #review:after
+  {content: '';
+  background: url(../image/nukki.png) no-repeat center center;
+  background-size: cover;
+  display: block;
+  width: 1200px;
+  height: 700px;
+  }
+
+/* FOOTER___________________!!!!!!! */
+footer
+  {background-color:rgb(80, 0, 80);
+  
+  }
+footer div
+  {/* border: 1px solid #000; */
+  width: 1200px;
+  height: 165px;
+  margin: auto;
+  /* position: relative;
+  justify-content: center;
+  align-items: center; */
+  }
+  div span
+    {/* position: absolute;
+    height: 100%; */
+    display: inline-block;
+    line-height: 165px;
+    float: left;
+    /* border: 1px solid #000; */
+    }
+  footer div:nth-child(2)
+  {height: 170px;
+  width: 300px;
+  }
+footer img
+  {width: 100px;
+  margin: 50px;
+  }
