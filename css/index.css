@@ -725,21 +725,28 @@ header
   }
   
 #review ul li:nth-child(1)
-  {left: 60px;}
+  {left: 60px;
+  color: #bbb;
+  }
   #review ul li:nth-child(2)
-  {right: 60px;}
+  {right: 60px;
+  color: #777;
+  }
   #review ul li:nth-child(3)
   {left: 0;
   top: 70px;}
   #review ul li:nth-child(4)
   {left: 610px;
-  top: 70px;}
+  top: 70px;
+  color: #bbb;}
   #review ul li:nth-child(5)
   {right: 0;
   top: 70px;}
   #review ul li:nth-child(6)
   {left: 220px;
-  top: 140px;}
+  top: 140px;
+  color: #777;
+  }
   #review ul li:nth-child(7)
   {right: 100px;
   top: 140px;}
@@ -752,16 +759,21 @@ header
   #review ul li:nth-child(10)
   {right: 10px;
   top: 210px;
+  color: #777;
   }
   #review ul li:nth-child(11)
   {left: 50px;
-  top: 280px;}
+  top: 280px;
+  color: #bbb;
+  }
   #review ul li:nth-child(12)
   {left: 380px;
-  top: 280px}
+  top: 280px;}
   #review ul li:nth-child(13)
   {right: 80px;
-  top: 280px;}
+  top: 280px;
+  color: #bbb;
+  }
 #review ul li:hover
   {background-color: #fff/* rgb(253, 205, 255) */;
   color:rgb(80, 0, 80);
